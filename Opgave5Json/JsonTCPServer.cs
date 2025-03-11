@@ -15,7 +15,7 @@ namespace Opgave5Json
             {
                 NetworkStream ns = client.GetStream();
                 StreamReader reader = new StreamReader(ns, Encoding.UTF8);
-                StreamWriter writer = new StreamWriter(ns, Encoding.UTF8) { AutoFlush = true };
+                StreamWriter writer = new StreamWriter(ns, new UTF8Encoding(false)) { AutoFlush = true };
 
                 try
                 {
